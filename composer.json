@@ -1,0 +1,73 @@
+{
+    "name": "bangpound/ukernel",
+    "license": "MIT",
+    "type": "project",
+    "description": "Symfony 3 microkernel",
+    "autoload": {
+        "psr-4": { "": "src/" },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php", "app/uKernel.php" ]
+    },
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests/" }
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/symfony": "3.0.*",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/doctrine-cache-bundle": "^1.2",
+        "symfony/swiftmailer-bundle": "^2.3",
+        "symfony/monolog-bundle": "^2.8",
+        "sensio/distribution-bundle": "^5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "^2.0"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^2.7",
+        "bangpound/composer-dotenv": "~1.0@dev"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ]
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
+        "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml",
+            "env-map": {
+                "database_host": "DATABASE_HOST",
+                "database_port": "DATABASE_PORT",
+                "database_name": "DATABASE_NAME",
+                "database_user": "DATABASE_USER",
+                "database_password": "DATABASE_PASSWORD",
+                "mailer_transport": "MAILER_TRANSPORT",
+                "mailer_host": "MAILER_HOST",
+                "mailer_user": "MAILER_USER",
+                "mailer_password": "MAILER_PASSWORD",
+                "secret": "SECRET"
+            }
+        },
+        "branch-alias": {
+            "dev-master": "3.0-dev"
+        }
+    }
+}
