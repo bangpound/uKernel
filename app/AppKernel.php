@@ -18,7 +18,7 @@ class AppKernel extends MicroKernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
         );
 
-        if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
+        if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
             $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
@@ -30,7 +30,7 @@ class AppKernel extends MicroKernel
 
     protected function configureRoutes(RouteCollectionBuilder $routes)
     {
-        if (in_array($this->getEnvironment(), array('dev'), true)) {
+        if (in_array($this->getEnvironment(), ['dev'], true)) {
             $routes->import($this->getRootDir().'/config/routing_'.$this->getEnvironment().'.yml');
         }
         else {
