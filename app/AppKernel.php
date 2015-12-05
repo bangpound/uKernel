@@ -1,7 +1,6 @@
 <?php
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
@@ -32,8 +31,7 @@ class AppKernel extends MicroKernel
     {
         if (in_array($this->getEnvironment(), ['dev'], true)) {
             $routes->import($this->getRootDir().'/config/routing_'.$this->getEnvironment().'.yml');
-        }
-        else {
+        } else {
             $routes->import($this->getRootDir().'/config/routing.yml');
         }
     }
