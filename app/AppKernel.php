@@ -1,11 +1,8 @@
 <?php
 
-use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
-use Symfony\Component\HttpKernel\Kernel;
-
-class AppKernel extends Kernel
+class AppKernel extends Symfony\Component\HttpKernel\Kernel
 {
-    use MicroKernelTrait;
+    use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
     use Bangpound\Kernel\VariableFilesystemTrait;
     use Bangpound\Kernel\ClassBasedNameTrait;
     use Bangpound\Kernel\YamlEnvironmentTrait;
