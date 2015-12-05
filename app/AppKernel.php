@@ -9,7 +9,7 @@ class AppKernel extends Kernel
     use VariableFilesystemTrait;
     use ClassBasedNameTrait;
     use YamlEnvironmentTrait;
-    use MinimalConfigTrait;
+    use StandardConfigTrait;
 
     public function registerBundles()
     {
