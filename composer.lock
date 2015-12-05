@@ -4,9 +4,47 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0fc421134947f995b8eca0e1bd5e01a9",
-    "content-hash": "bcf00251b3e3fb70ada21784b656bf6f",
+    "hash": "89dd6f791f6107df3216dfd7b818437b",
+    "content-hash": "0013802161c96e1874cd4e33fddc6a4b",
     "packages": [
+        {
+            "name": "bangpound/kernel-traits",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bangpound/kernel-traits.git",
+                "reference": "ad5517db4b87067b0cb683639fe26b3b149c4c91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bangpound/kernel-traits/zipball/ad5517db4b87067b0cb683639fe26b3b149c4c91",
+                "reference": "ad5517db4b87067b0cb683639fe26b3b149c4c91",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bangpound\\Kernel\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Doherty",
+                    "email": "bjd@bangpound.org"
+                }
+            ],
+            "description": "Symfony kernel traits",
+            "time": "2015-12-05 14:13:09"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.7",
@@ -2025,6 +2063,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "bangpound/kernel-traits": 20,
         "bangpound/composer-dotenv": 20
     },
     "prefer-stable": false,

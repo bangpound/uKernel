@@ -6,10 +6,10 @@ use Symfony\Component\HttpKernel\Kernel;
 class AppKernel extends Kernel
 {
     use MicroKernelTrait;
-    use VariableFilesystemTrait;
-    use ClassBasedNameTrait;
-    use YamlEnvironmentTrait;
-    use StandardConfigTrait;
+    use Bangpound\Kernel\VariableFilesystemTrait;
+    use Bangpound\Kernel\ClassBasedNameTrait;
+    use Bangpound\Kernel\YamlEnvironmentTrait;
+    use Bangpound\Kernel\StandardConfigTrait;
 
     public function registerBundles()
     {
