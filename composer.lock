@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2dde2c96957ace51a1665fd11ab58fe9",
+    "hash": "0fc421134947f995b8eca0e1bd5e01a9",
     "content-hash": "bcf00251b3e3fb70ada21784b656bf6f",
     "packages": [
         {
@@ -1832,12 +1832,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bangpound/composer-dotenv.git",
-                "reference": "bad1abeea40a0f83d677b19fe542c1aeeb74caab"
+                "reference": "1df6b18ffefd6e69d8062007048a52e4cf90c2f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bangpound/composer-dotenv/zipball/bad1abeea40a0f83d677b19fe542c1aeeb74caab",
-                "reference": "bad1abeea40a0f83d677b19fe542c1aeeb74caab",
+                "url": "https://api.github.com/repos/bangpound/composer-dotenv/zipball/1df6b18ffefd6e69d8062007048a52e4cf90c2f3",
+                "reference": "1df6b18ffefd6e69d8062007048a52e4cf90c2f3",
                 "shasum": ""
             },
             "require": {
@@ -1861,7 +1861,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Load environment variables from `.env` when Composer runs",
-            "time": "2015-12-04 04:32:26"
+            "time": "2015-12-05 13:06:57"
         },
         {
             "name": "sensio/generator-bundle",
