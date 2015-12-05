@@ -1,11 +1,16 @@
 <?php
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\Routing\RouteCollectionBuilder;
+use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
+use Symfony\Component\HttpKernel\Kernel;
 
-class AppKernel extends MicroKernel
+class AppKernel extends Kernel
 {
+    use MicroKernelTrait;
+    use VariableFilesystemTrait;
+    use ClassBasedNameTrait;
+    use YamlEnvironmentTrait;
+    use MinimalConfigTrait;
+
     public function registerBundles()
     {
         $bundles = array(
@@ -27,19 +32,5 @@ class AppKernel extends MicroKernel
         }
 
         return $bundles;
-    }
-
-    protected function configureRoutes(RouteCollectionBuilder $routes)
-    {
-        if (in_array($this->getEnvironment(), ['dev'], true)) {
-            $routes->import($this->getRootDir().'/config/routing_'.$this->getEnvironment().'.yml');
-        } else {
-            $routes->import($this->getRootDir().'/config/routing.yml');
-        }
-    }
-
-    protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
-    {
-        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
 }
