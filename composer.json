@@ -5,7 +5,7 @@
     "description": "Symfony 3 microkernel",
     "autoload": {
         "psr-4": { "": "src/" },
-        "classmap": [ "app/AppKernel.php", "app/AppCache.php", "app/uKernel.php" ]
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php", "app/MicroKernel.php" ]
     },
     "autoload-dev": {
         "psr-4": { "Tests\\": "tests/" }

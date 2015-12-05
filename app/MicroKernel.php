@@ -4,7 +4,7 @@ use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpKernel\Kernel;
 
-abstract class uKernel extends Kernel
+abstract class MicroKernel extends Kernel
 {
     use MicroKernelTrait;
 

@@ -5,7 +5,7 @@ use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\Routing\RouteCollectionBuilder;
 
-class AppKernel extends uKernel
+class AppKernel extends MicroKernel
 {
     public function registerBundles()
     {
